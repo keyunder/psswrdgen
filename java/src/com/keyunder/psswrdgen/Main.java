@@ -21,12 +21,9 @@ public class Main {
     private static final SecureRandom random = new SecureRandom();
 
     public static void main(String[] args) {
-        long timer = System.nanoTime();
         String psswrd = pwgen(askForLength(args));
         System.out.println("Generated password: " + psswrd);
         System.out.println("Password length:\t" + psswrd.length());
-        timer = System.nanoTime() - timer;
-        System.out.println(timer / 1_000_000);
     }
 
     static private String pwgen(int length) {
